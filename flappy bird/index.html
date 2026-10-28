@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Fly through the gaps in this quick, cheerful bird game."
+    />
+    <meta name="theme-color" content="#d8efff" />
+    <title>Flappy Bird — Web Laro!!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../index.html" aria-label="Web Laro!! home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>Web Laro!!</span>
+      </a>
+      <a class="back-link" href="../index.html#games"><span aria-hidden="true">←</span> All games</a>
+    </header>
+
+    <main class="game-page">
+      <section class="game-panel" aria-labelledby="game-title">
+        <p class="eyebrow"><span aria-hidden="true">✦</span> A tiny test of timing</p>
+        <h1 id="game-title">Flappy Bird</h1>
+        <p class="intro">How far can you fly?</p>
+
+        <div class="scoreboard" aria-label="Game score">
+          <div class="score-card">
+            <span class="score-label">SCORE</span>
+            <span class="score-value" id="score">0</span>
+          </div>
+          <div class="score-card best-card">
+            <span class="score-label">BEST</span>
+            <span class="score-value" id="best-score">0</span>
+          </div>
+        </div>
+
+        <div class="game-frame">
+          <canvas
+            id="game-canvas"
+            width="360"
+            height="560"
+            role="img"
+            aria-label="Flappy Bird game. Press Space, Arrow Up, or tap the game to flap."
+            tabindex="0"
+          ></canvas>
+          <div class="game-overlay" id="game-overlay">
+            <span class="overlay-icon" id="overlay-icon" aria-hidden="true">🐤</span>
+            <strong id="overlay-title">Ready to fly?</strong>
+            <span id="overlay-message">Tap, click, or press Space to flap</span>
+          </div>
+        </div>
+
+        <p class="game-status" id="game-status" role="status" aria-live="polite">
+          Ready when you are!
+        </p>
+        <button class="play-button" id="play-button" type="button">Start game <span aria-hidden="true">→</span></button>
+        <p class="game-hint">Tap, click, Space, or ↑ to flap</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 Web Laro!!</span>
+      <a href="../index.html#games">More little games <span aria-hidden="true">→</span></a>
+    </footer>
+  </body>
+</html>

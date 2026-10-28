@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A simple online whiteboard for doodling, sketching, and drawing."
+    />
+    <meta name="theme-color" content="#f5f3ed" />
+    <title>Whiteboard — Web Laro!!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../index.html" aria-label="Web Laro!! home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>Web Laro!!</span>
+      </a>
+      <a class="back-link" href="../index.html#games"><span aria-hidden="true">←</span> All games</a>
+    </header>
+
+    <main class="page">
+      <section class="whiteboard-app" aria-labelledby="page-title">
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow"><span aria-hidden="true">✦</span> Make a little something</p>
+            <h1 id="page-title">Whiteboard</h1>
+            <p class="intro">A blank canvas for whatever pops into your head.</p>
+          </div>
+          <span class="canvas-note"><span aria-hidden="true">●</span> Your canvas, your rules</span>
+        </div>
+
+        <div class="toolbar" role="toolbar" aria-label="Drawing tools">
+          <div class="tool-group colors" role="group" aria-label="Brush color">
+            <button class="color-swatch is-selected" type="button" data-color="#20231f" style="--swatch: #20231f" aria-label="Black" aria-pressed="true"></button>
+            <button class="color-swatch" type="button" data-color="#e55757" style="--swatch: #e55757" aria-label="Red" aria-pressed="false"></button>
+            <button class="color-swatch" type="button" data-color="#f0a62f" style="--swatch: #f0a62f" aria-label="Orange" aria-pressed="false"></button>
+            <button class="color-swatch" type="button" data-color="#64a84c" style="--swatch: #64a84c" aria-label="Green" aria-pressed="false"></button>
+            <button class="color-swatch" type="button" data-color="#4f81d9" style="--swatch: #4f81d9" aria-label="Blue" aria-pressed="false"></button>
+            <button class="color-swatch" type="button" data-color="#9a68cc" style="--swatch: #9a68cc" aria-label="Purple" aria-pressed="false"></button>
+            <label class="custom-color" title="Choose a custom color">
+              <span aria-hidden="true">＋</span>
+              <input id="custom-color" type="color" value="#20231f" aria-label="Choose a custom brush color" />
+            </label>
+          </div>
+
+          <div class="tool-divider" aria-hidden="true"></div>
+
+          <label class="size-control" for="brush-size">
+            <span>Brush</span>
+            <input id="brush-size" type="range" min="2" max="32" value="6" />
+            <output id="size-value" for="brush-size">6 px</output>
+          </label>
+
+          <div class="tool-divider" aria-hidden="true"></div>
+
+          <button class="tool-button" id="eraser-button" type="button" aria-pressed="false">
+            <span aria-hidden="true">◩</span> Eraser
+          </button>
+          <button class="tool-button" id="undo-button" type="button" disabled>
+            <span aria-hidden="true">↶</span> Undo
+          </button>
+          <button class="tool-button" id="clear-button" type="button">
+            <span aria-hidden="true">⌫</span> Clear
+          </button>
+          <button class="save-button" id="save-button" type="button">
+            <span aria-hidden="true">↓</span> Save drawing
+          </button>
+        </div>
+
+        <div class="canvas-wrap">
+          <canvas
+            id="drawing-canvas"
+            role="img"
+            aria-label="Blank white drawing canvas. Use a mouse, touch, or stylus to draw."
+            tabindex="0"
+          ></canvas>
+          <span class="canvas-hint" id="canvas-hint">Start drawing anywhere ✨</span>
+        </div>
+
+        <div class="board-footer">
+          <span>Draw with your mouse, finger, or stylus</span>
+          <span id="drawing-count" aria-live="polite">A fresh page</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 Web Laro!!</span>
+      <a href="../index.html#games">More little games <span aria-hidden="true">→</span></a>
+    </footer>
+  </body>
+</html>
