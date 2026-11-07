@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Challenge a friend to Ultimate Tic-Tac-Toe, the classic game across nine boards."
+    />
+    <meta name="theme-color" content="#f5f3ed" />
+    <title>Ultimate Tic-Tac-Toe — Web Laro!!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../index.html" aria-label="Web Laro!! home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>Web Laro!!</span>
+      </a>
+      <a class="back-link" href="../index.html#games"><span aria-hidden="true">←</span> All games</a>
+    </header>
+
+    <main class="game-page">
+      <section class="game-panel" aria-labelledby="game-title">
+        <p class="eyebrow"><span aria-hidden="true">✦</span> Nine boards. One big game.</p>
+        <h1 id="game-title">Ultimate Tic-Tac-Toe</h1>
+        <p class="intro">
+          Win three small boards in a row. Where you play sends your friend to their next board!
+        </p>
+
+        <div class="scoreboard" aria-label="Round score">
+          <div class="score-card score-x" id="score-card-x">
+            <span class="score-mark" aria-hidden="true">X</span>
+            <span class="player-name">Player X</span>
+            <span class="score-value" id="score-x">0</span>
+          </div>
+          <div class="score-card score-draw">
+            <span class="score-mark" aria-hidden="true">＝</span>
+            <span class="player-name">Draws</span>
+            <span class="score-value" id="score-draw">0</span>
+          </div>
+          <div class="score-card score-o" id="score-card-o">
+            <span class="score-mark" aria-hidden="true">O</span>
+            <span class="player-name">Player O</span>
+            <span class="score-value" id="score-o">0</span>
+          </div>
+        </div>
+
+        <p class="game-status" id="game-status" role="status" aria-live="polite">
+          Player X's turn — play in any open board
+        </p>
+
+        <div class="board" id="ultimate-board" role="group" aria-label="Ultimate Tic-Tac-Toe board"></div>
+
+        <button class="reset-button" id="new-round" type="button">New round <span aria-hidden="true">↻</span></button>
+        <p class="game-hint">Two players · Same screen · Your move picks the next board</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 Web Laro!!</span>
+      <a href="../index.html#games">More little games <span aria-hidden="true">→</span></a>
+    </footer>
+  </body>
+</html>
